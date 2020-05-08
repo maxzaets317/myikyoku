@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">my医局</string>
+
+	<!-- To enable push notifications on Repro, uncomment the following: -->
+    <string name="repro_channel_name">MyIkyoku</string>
+    <string name="repro_channel_description">This is a channel of myikyoku.</string>
+    <!-- deeplink -->
+    <string name="filter_view_app_myikyoku">filter_view_app_myikyoku</string>
+</resources>

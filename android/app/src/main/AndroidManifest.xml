@@ -1,0 +1,84 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jp.co.medicalprinciple.myikyoku">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+      android:name="jp.co.medicalprinciple.myikyoku.MainApplication"
+      android:label="@string/app_name"
+      android:icon="@mipmap/app_icon"
+      android:allowBackup="false"
+      android:theme="@style/AppTheme"
+	  android:usesCleartextTraffic="true">
+      <activity
+        android:name="jp.co.medicalprinciple.myikyoku.MainActivity"
+        android:label="@string/app_name"
+		android:theme="@style/SplashTheme"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustResize"
+        android:launchMode="singleTask">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        <intent-filter android:label="@string/filter_view_app_myikyoku">
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <!-- Accepts URIs that begin with "myikyoku://app/article/~” -->
+            <data
+                android:scheme="myikyoku"
+                android:host="app"
+                android:pathPattern=".*"
+            />
+        </intent-filter>
+      </activity>
+      <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+
+      <receiver
+        android:name="io.repro.android.ReproReceiver"
+        android:exported="true"
+        android:permission="com.google.android.c2dm.permission.SEND">
+        <intent-filter>
+            <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            <category android:name="jp.co.medicalprinciple.myikyoku" />
+        </intent-filter>
+      </receiver>
+
+      <service
+        android:name="jp.co.medicalprinciple.myikyoku.MyIkyokuFirebaseMessagingService">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT" />
+        </intent-filter>
+      </service>
+
+      <meta-data
+          android:name="io.repro.android.PushNotification.ChannelId"
+          android:value="myikyoku_7e82b">
+      </meta-data>
+
+      <meta-data
+          android:name="io.repro.android.PushNotification.ChannelName"
+          android:resource="@string/repro_channel_name">
+      </meta-data>
+
+      <meta-data
+          android:name="io.repro.android.PushNotification.ChannelDescription"
+          android:resource="@string/repro_channel_description">
+      </meta-data>
+
+      <meta-data
+          android:name="io.repro.android.PushNotification.ShowBadge"
+          android:value="true">
+      </meta-data>
+
+      <meta-data
+          android:name="io.repro.android.PushNotification.SmallIcon"
+          android:resource="@mipmap/app_icon">
+      </meta-data>
+    </application>
+
+</manifest>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "360868625297",
+    "firebase_url": "https://myikyoku-fb-test.firebaseio.com",
+    "project_id": "myikyoku-fb-test",
+    "storage_bucket": "myikyoku-fb-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360868625297:android:925884b34b645de1a73830",
+        "android_client_info": {
+          "package_name": "jp.co.medicalprinciple.myikyoku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "360868625297-cjv2d1invi6hi1j5mcv6r91k3pdnuhul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgkQUUKJNf4jDpHmMUUkIkTl2B1NDDMuM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "360868625297-cjv2d1invi6hi1j5mcv6r91k3pdnuhul.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "360868625297-5p0l2foni9urhe3skq7aouk53g1n2kur.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "jp.co.medicalprinciple.myikyoku"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
